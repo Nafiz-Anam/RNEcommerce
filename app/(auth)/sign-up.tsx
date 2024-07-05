@@ -40,7 +40,7 @@ const SignUpScreen = () => {
             <ImageBackground
                 source={require("@/assets/images/Bubbles.png")}
                 style={styles.backgroundImage}
-                resizeMode="contain"
+                resizeMode="cover"
             />
             <ScrollView
                 contentContainerStyle={{
