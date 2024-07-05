@@ -17,6 +17,12 @@ const AuthLayout = () => {
                         headerShown: false,
                     }}
                 />
+                <Stack.Screen
+                    name="otp"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack>
 
             <StatusBar style="dark" />

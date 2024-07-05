@@ -31,21 +31,21 @@ const InitialScreen = () => {
                     <View style={styles.bottomPart}>
                         <CustomButton
                             title="Let's get started"
-                            handlePress={() => router.push("/sign-in")}
+                            handlePress={() => router.push("/sign-up")}
                             isLoading={false}
                         />
-                        <View style={styles.bottomTextArea}>
-                            {/* <Link href="/sign-up"> */}
-                            <Text style={styles.bottomText}>
-                                I already have an account?
-                            </Text>
-                            <Image
-                                source={require("@/assets/images/Button.png")}
-                                style={styles.btnLogo}
-                                resizeMode="contain"
-                            />
-                            {/* </Link> */}
-                        </View>
+                        <Link href="/sign-in">
+                            <View style={styles.bottomTextArea}>
+                                <Text style={styles.bottomText}>
+                                    I already have an account?
+                                </Text>
+                                <Image
+                                    source={require("@/assets/images/Button.png")}
+                                    style={styles.btnLogo}
+                                    resizeMode="contain"
+                                />
+                            </View>
+                        </Link>
                     </View>
                 </View>
             </ScrollView>
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 15,
+        paddingTop: 15,
     },
     bottomText: { fontSize: 18, fontWeight: "300" },
     btnLogo: { width: 30, height: 30, marginLeft: 15 },

@@ -15,7 +15,7 @@ import CustomButton from "@/components/CustomButton";
 import { router } from "expo-router";
 import PhoneInput from "react-native-phone-number-input";
 
-const SignUpScreen = () => {
+const SignInScreen = () => {
     const [image, setImage] = useState<string | null>(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -38,9 +38,9 @@ const SignUpScreen = () => {
     return (
         <SafeAreaView style={styles.safeArea}>
             <ImageBackground
-                source={require("@/assets/images/Bubbles.png")}
+                source={require("@/assets/images/Bubbles2.png")}
                 style={styles.backgroundImage}
-                resizeMode="contain"
+                resizeMode="cover"
             />
             <ScrollView
                 contentContainerStyle={{
@@ -48,25 +48,9 @@ const SignUpScreen = () => {
                 }}
             >
                 <View style={styles.container}>
-                    <Text style={styles.header}>Create Account</Text>
-                    <TouchableOpacity
-                        onPress={pickImage}
-                        style={{ width: 100 }}
-                    >
-                        <View style={styles.imageUpload}>
-                            {image ? (
-                                <Image
-                                    source={{ uri: image }}
-                                    style={styles.image}
-                                />
-                            ) : (
-                                <Image
-                                    source={require("@/assets/images/UploadPhoto.png")}
-                                    style={styles.placeholder}
-                                />
-                            )}
-                        </View>
-                    </TouchableOpacity>
+                    <Text style={styles.header}>Login</Text>
+                    <Text style={styles.subTitle}>Good to see you back!</Text>
+
                     <TextInput
                         style={styles.input}
                         placeholder="Email"
@@ -76,35 +60,10 @@ const SignUpScreen = () => {
                         autoCapitalize="none"
                         placeholderTextColor="#999"
                     />
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Password"
-                        value={password}
-                        onChangeText={setPassword}
-                        secureTextEntry
-                        autoCapitalize="none"
-                        placeholderTextColor="#999"
-                    />
-                    <PhoneInput
-                        defaultValue={phoneNumber}
-                        defaultCode="US"
-                        layout="first"
-                        onChangeText={(text) => {
-                            setPhoneNumber(text);
-                        }}
-                        onChangeFormattedText={(text) => {
-                            setFormattedValue(text);
-                        }}
-                        containerStyle={styles.phoneContainer}
-                        textContainerStyle={styles.phoneTextContainer}
-                        placeholder="Your number"
-                        textInputProps={{
-                            placeholderTextColor: "#999",
-                        }}
-                    />
+
                     <CustomButton
-                        title="Done"
-                        handlePress={() => router.push("/sign-in")}
+                        title="Next"
+                        handlePress={() => router.push("/otp")}
                         isLoading={false}
                     />
 
@@ -125,10 +84,9 @@ const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         width: "100%",
-        height: "65%",
+        height: "105%",
         position: "absolute",
         top: 0,
-        // borderWidth: 2,
     },
     container: {
         flex: 1,
@@ -136,31 +94,16 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         paddingBottom: 50,
-        // width: "100%",
     },
     header: {
         fontSize: 50,
         fontWeight: "700",
         marginBottom: 20,
-        width: "85%",
     },
-    imageUpload: {
-        width: 100,
-        height: 100,
-        borderRadius: 45,
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 20,
-        marginBottom: 40,
-    },
-    image: {
-        width: 90,
-        height: 90,
-        borderRadius: 45,
-    },
-    placeholder: {
-        width: 90,
-        height: 90,
+    subTitle: {
+        fontSize: 18,
+        fontWeight: "300",
+        marginBottom: 20,
     },
     input: {
         width: "100%",
@@ -171,18 +114,6 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         backgroundColor: "#F8F8F8",
     },
-    phoneContainer: {
-        width: "100%",
-        borderWidth: 0,
-        borderRadius: 25,
-        marginBottom: 45,
-        backgroundColor: "#F8F8F8",
-    },
-    phoneTextContainer: {
-        borderRadius: 25,
-        backgroundColor: "#F8F8F8",
-    },
-
     cancelText: {
         color: "#000",
         fontSize: 18,
@@ -191,4 +122,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SignUpScreen;
+export default SignInScreen;
