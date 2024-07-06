@@ -6,6 +6,12 @@ import Announcement from "@/components/Announcement";
 import RecentlyViewed from "@/components/recentView";
 import MyOrders from "@/components/myOrders";
 import Stories from "@/components/stories";
+import NewItems from "@/components/newItem";
+import MostPopular from "@/components/popular";
+import Categories from "@/components/CategorySection";
+import FlashSaleSection from "@/components/FlashSaleSection";
+import JustForYouSection from "@/components/JustForYouSection";
+import TopProductsSection from "@/components/TopProductsSection";
 
 const screenHeight = Dimensions.get("window").height;
 
@@ -19,6 +25,12 @@ const Profile = () => {
                 <RecentlyViewed />
                 <MyOrders />
                 <Stories />
+                <NewItems />
+                <MostPopular />
+                <Categories />
+                <FlashSaleSection />
+                <TopProductsSection />
+                <JustForYouSection />
             </ScrollView>
         </SafeAreaView>
     );
@@ -27,7 +39,7 @@ const Profile = () => {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        // backgroundColor: "red",
+        backgroundColor: "#fff",
     },
     contentContainer: {
         minHeight: screenHeight,
