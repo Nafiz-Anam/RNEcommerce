@@ -35,6 +35,18 @@ const AuthLayout = () => {
                         headerShown: false,
                     }}
                 />
+                <Stack.Screen
+                    name="password-otp"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="create-password"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack>
 
             <StatusBar style="dark" />

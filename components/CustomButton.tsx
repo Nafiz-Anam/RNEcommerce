@@ -1,20 +1,33 @@
+import React from "react";
 import {
     ActivityIndicator,
     StyleSheet,
     Text,
     TouchableOpacity,
+    ViewStyle,
 } from "react-native";
 
-const CustomButton = ({ title, handlePress, isLoading }: any) => {
+interface CustomButtonProps {
+    title: string;
+    handlePress: () => void;
+    isLoading: boolean;
+    backgroundColor?: string ;
+}
+
+const CustomButton: React.FC<CustomButtonProps> = ({
+    title,
+    handlePress,
+    isLoading,
+    backgroundColor = "#004CFF", // Default background color
+}) => {
     return (
         <TouchableOpacity
             onPress={handlePress}
             activeOpacity={0.7}
-            style={styles.btn}
+            style={[styles.btn, { backgroundColor }]}
             disabled={isLoading}
         >
             <Text style={styles.label}>{title}</Text>
-
             {isLoading && (
                 <ActivityIndicator
                     animating={isLoading}
@@ -31,11 +44,9 @@ export default CustomButton;
 
 const styles = StyleSheet.create({
     btn: {
-        backgroundColor: "#004CFF",
         borderRadius: 15,
         width: "100%",
         minHeight: 62,
-        display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",

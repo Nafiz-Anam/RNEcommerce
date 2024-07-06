@@ -18,7 +18,7 @@ const PasswordRecovery = () => {
     return (
         <SafeAreaView style={styles.safeArea}>
             <ImageBackground
-                source={require("@/assets/images/Bubbles3.png")}
+                source={require("@/assets/images/Bubbles4.png")}
                 style={styles.backgroundImage}
                 resizeMode="cover"
             />
@@ -112,7 +112,7 @@ const PasswordRecovery = () => {
                     <View style={styles.bottomPart}>
                         <CustomButton
                             title="Next"
-                            handlePress={() => router.push("/password")}
+                            handlePress={() => router.push("/password-otp")}
                             isLoading={false}
                         />
                         <TouchableOpacity onPress={() => router.back()}>
