@@ -1,6 +1,7 @@
 import {
     View,
     Text,
+    TextInput,
     TouchableOpacity,
     Image,
     StyleSheet,
@@ -11,16 +12,9 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import CustomButton from "@/components/CustomButton";
-import OTPInput from "@/components/OTPInput";
 
-const OTPScreen = () => {
-    const [otp, setOtp] = useState(["", "", "", ""]);
-
-    const handleChangeOTP = (text: string, index: number) => {
-        const newOtp = [...otp];
-        newOtp[index] = text;
-        setOtp(newOtp);
-    };
+const Password = () => {
+    const [password, setPassword] = useState("");
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -44,24 +38,27 @@ const OTPScreen = () => {
                             />
                         </View>
                         <Text style={styles.header}>Hello, Romina!!</Text>
-                        <Text style={styles.subTitle}>Type your OTP</Text>
-                        <OTPInput onChangeOTP={handleChangeOTP} />
+                        <Text style={styles.subTitle}>Type your Password</Text>
+                        <TextInput
+                            style={styles.input}
+                            placeholder="Password"
+                            value={password}
+                            onChangeText={setPassword}
+                            secureTextEntry
+                            autoCapitalize="none"
+                            placeholderTextColor="#999"
+                        />
                     </View>
                     <View style={styles.bottomPart}>
                         <CustomButton
-                            title="Verify OTP"
-                            handlePress={() => router.push("/password")}
+                            title="Sign In"
+                            handlePress={() =>
+                                router.push("/password-recovery")
+                            }
                             isLoading={false}
                         />
                         <TouchableOpacity onPress={() => router.back()}>
-                            <View style={styles.bottomTextArea}>
-                                <Text style={styles.bottomText}>Not You?</Text>
-                                <Image
-                                    source={require("@/assets/images/Button.png")}
-                                    style={styles.btnLogo}
-                                    resizeMode="contain"
-                                />
-                            </View>
+                            <Text style={styles.cancelText}>Cancel</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -70,7 +67,7 @@ const OTPScreen = () => {
     );
 };
 
-export default OTPScreen;
+export default Password;
 
 const styles = StyleSheet.create({
     safeArea: {
@@ -96,6 +93,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         flex: 1,
+        width: "100%",
     },
     header: {
         fontSize: 40,
@@ -133,12 +131,19 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingBottom: 20,
     },
-    bottomTextArea: {
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingTop: 15,
+    cancelText: {
+        color: "#000",
+        fontSize: 18,
+        textAlign: "center",
+        marginTop: 25,
     },
-    bottomText: { fontSize: 18, fontWeight: "300" },
-    btnLogo: { width: 30, height: 30, marginLeft: 15 },
+    input: {
+        width: "100%",
+        height: 52,
+        borderWidth: 0,
+        borderRadius: 25,
+        paddingHorizontal: 15,
+        marginBottom: 15,
+        backgroundColor: "#F8F8F8",
+    },
 });
