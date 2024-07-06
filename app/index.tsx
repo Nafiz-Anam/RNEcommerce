@@ -31,7 +31,7 @@ const InitialScreen = () => {
                     <View style={styles.bottomPart}>
                         <CustomButton
                             title="Let's get started"
-                            handlePress={() => router.push("/sign-up")}
+                            handlePress={() => router.push("/profile")}
                             isLoading={false}
                         />
                         <Link href="/sign-in">
