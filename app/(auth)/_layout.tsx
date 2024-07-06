@@ -47,6 +47,12 @@ const AuthLayout = () => {
                         headerShown: false,
                     }}
                 />
+                <Stack.Screen
+                    name="slider"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack>
 
             <StatusBar style="dark" />

@@ -64,7 +64,7 @@ const CreatePassword = () => {
                         <CustomButton
                             title="Save"
                             handlePress={() =>
-                                router.push("/password-recovery")
+                                router.push("/slider")
                             }
                             isLoading={false}
                         />

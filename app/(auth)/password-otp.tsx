@@ -53,7 +53,7 @@ const PasswordOTP = () => {
                         <OTPInput onChangeOTP={handleChangeOTP} />
                     </View>
                     <View style={styles.bottomPart}>
-                        <CustomButton
+                        <CustomButton 
                             title={isOTPFilled ? "Verify OTP" : "Send Again"}
                             handlePress={() => {
                                 if (isOTPFilled) {
