@@ -20,12 +20,16 @@ const Item: React.FC<ItemProps> = ({
         <View style={styles.itemContainer}>
             <View style={styles.imgContainer}>
                 <Image source={image} style={styles.image} />
-            </View> 
+                {tag && (
+                    <View style={styles.tagContainer}>
+                        <Text style={styles.tagText}>{tag}</Text>
+                    </View>
+                )}
+            </View>
 
             <Text style={styles.description}>{description}</Text>
             {price && <Text style={styles.price}>{price}</Text>}
             {heart && <Text style={styles.price}>{heart} ❤</Text>}
-            {tag && <Text style={styles.tag}>{tag}</Text>}
         </View>
     );
 };
@@ -44,6 +48,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         justifyContent: "center",
         alignItems: "center",
+        elevation: 5,
     },
     itemContainer: {
         margin: 8,
@@ -62,14 +67,17 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "700",
     },
-    tag: {
+    tagContainer: {
         position: "absolute",
         top: 10,
         right: 10,
         backgroundColor: "blue",
-        color: "white",
-        paddingHorizontal: 5,
         borderRadius: 5,
+        paddingHorizontal: 5,
+        paddingVertical: 2,
+    },
+    tagText: {
+        color: "white",
         fontSize: 12,
     },
 });

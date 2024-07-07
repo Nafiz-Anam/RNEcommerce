@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     buttonsContainer: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginVertical: 10,
+        gap: 10,
     },
     button: {
         backgroundColor: "#E5EBFC",
-        borderRadius: 20,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        borderRadius: 50,
+        paddingVertical: 8,
+        paddingHorizontal: 15,
     },
     buttonText: {
         fontSize: 20,

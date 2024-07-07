@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     bannerImage: {
         width: "100%",
         height: 150,
-        borderRadius: 10,
     },
     bannerTitle: {
         fontSize: 26,

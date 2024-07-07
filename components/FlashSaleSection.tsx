@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     item: {
-        flex: 1,
+        // flex: 1,
     },
 });
 

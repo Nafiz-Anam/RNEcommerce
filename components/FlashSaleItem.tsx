@@ -1,5 +1,10 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
+
+const screenWidth = Dimensions.get("window").width;
+const itemMargin = 5;
+const numColumns = 3;
+const itemWidth = (screenWidth - (numColumns + 10) * itemMargin) / numColumns;
 
 type FlashSaleItemProps = {
     image: any;
@@ -8,7 +13,9 @@ type FlashSaleItemProps = {
 
 const FlashSaleItem: React.FC<FlashSaleItemProps> = ({ image, discount }) => {
     return (
-        <View style={styles.container}>
+        <View
+            style={[styles.container, { width: itemWidth, height: itemWidth }]}
+        >
             <Image source={image} style={styles.image} />
             <View style={styles.discountContainer}>
                 <Text style={styles.discountText}>{discount}</Text>
@@ -22,7 +29,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         borderRadius: 10,
         padding: 8,
-        margin: 5,
+        margin: itemMargin,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -30,9 +37,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.2,
         shadowRadius: 3.84,
-        elevation: 2,
-        width: 125,
-        height: 125,
+        elevation: 5,
     },
     image: {
         width: "100%",

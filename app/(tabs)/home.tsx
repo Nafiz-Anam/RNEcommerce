@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Dimensions, } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/header";
 import Greeting from "@/components/greetings";
@@ -13,28 +13,28 @@ import FlashSaleSection from "@/components/FlashSaleSection";
 import JustForYouSection from "@/components/JustForYouSection";
 import TopProductsSection from "@/components/TopProductsSection";
 
-const screenHeight = Dimensions.get("window").height;
-
 const Profile = () => {
+    const sections = [
+        { id: "header", component: <Header /> },
+        { id: "greeting", component: <Greeting /> },
+        { id: "announcement", component: <Announcement /> },
+        { id: "recentlyViewed", component: <RecentlyViewed /> },
+        { id: "myOrders", component: <MyOrders /> },
+        { id: "stories", component: <Stories /> },
+        { id: "newItems", component: <NewItems /> },
+        { id: "mostPopular", component: <MostPopular /> },
+        { id: "categories", component: <Categories /> },
+        { id: "flashSaleSection", component: <FlashSaleSection /> },
+        { id: "topProductsSection", component: <TopProductsSection /> },
+        { id: "justForYouSection", component: <JustForYouSection /> },
+    ];
     return (
-        <SafeAreaView
-            edges={["top", "right", "left"]}
-            style={styles.safeArea}
-        >
-            <ScrollView contentContainerStyle={styles.contentContainer}>
-                <Header />
-                <Greeting />
-                <Announcement />
-                <RecentlyViewed />
-                <MyOrders />
-                <Stories />
-                <NewItems />
-                <MostPopular />
-                <Categories />
-                <FlashSaleSection />
-                <TopProductsSection />
-                <JustForYouSection />
-            </ScrollView>
+        <SafeAreaView edges={["top", "right", "left"]} style={styles.safeArea}>
+            <FlatList
+                data={sections}
+                renderItem={({ item }) => item.component}
+                keyExtractor={(item) => item.id}
+            />
         </SafeAreaView>
     );
 };
@@ -43,10 +43,6 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: "#fff",
-    },
-    contentContainer: {
-        minHeight: screenHeight,
-        // backgroundColor: "blue",
     },
 });
 
