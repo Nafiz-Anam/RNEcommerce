@@ -25,10 +25,11 @@ const TopProductsSection: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        marginVertical: 10,
     },
     title: {
-        fontSize: 20,
+        marginLeft: 15,
+        fontSize: 25,
         fontWeight: "700",
         marginBottom: 10,
     },

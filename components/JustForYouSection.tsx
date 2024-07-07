@@ -63,7 +63,8 @@ const JustForYouSection: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        marginVertical: 10,
+        marginHorizontal: 15,
     },
     header: {
         flexDirection: "row",
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: "700",
     },
     star: {

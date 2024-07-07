@@ -9,7 +9,7 @@ const stories = [
 
 const Stories = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.title}>Stories</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 {stories.map((image, index) => (
@@ -35,6 +35,9 @@ const Stories = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        marginVertical: 10,
+    },
     title: {
         fontSize: 25,
         fontWeight: "700",

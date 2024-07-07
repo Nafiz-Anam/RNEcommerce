@@ -68,9 +68,10 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginHorizontal: 15,
+        marginBottom: 10,
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: "700",
     },
     seeAll: {

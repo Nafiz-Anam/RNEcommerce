@@ -11,7 +11,7 @@ const Greeting = () => {
 const styles = StyleSheet.create({
     greetingContainer: {
         paddingHorizontal: 15,
-        paddingVertical: 10,
+        paddingTop: 10,
     },
     greetingText: {
         fontSize: 32,

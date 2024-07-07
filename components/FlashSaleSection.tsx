@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: "700",
     },
     timer: {

@@ -21,7 +21,7 @@ const MyOrders = () => {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 10,
+        marginBottom: 10,
         marginHorizontal: 15,
     },
     title: {
