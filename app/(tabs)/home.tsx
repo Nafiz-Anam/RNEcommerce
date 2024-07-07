@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Dimensions } from "react-native";
+import { ScrollView, StyleSheet, Dimensions, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/header";
 import Greeting from "@/components/greetings";
@@ -17,7 +17,10 @@ const screenHeight = Dimensions.get("window").height;
 
 const Profile = () => {
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView
+            edges={["top", "right", "left"]}
+            style={styles.safeArea}
+        >
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <Header />
                 <Greeting />

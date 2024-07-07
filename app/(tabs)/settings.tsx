@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Settings = () => {
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView edges={["top", "right", "left"]} style={styles.safeArea}>
             <ScrollView style={styles.container}>
                 <Text style={styles.header}>Settings</Text>
 
@@ -58,7 +58,7 @@ const Settings = () => {
                 </TouchableOpacity>
 
                 <Text style={styles.footerTitle}>Shoppe</Text>
-                <Text style={[styles.footer, { marginBottom: 80 }]}>
+                <Text style={[styles.footer, { marginBottom: 50 }]}>
                     Version 1.0 July, 2024
                 </Text>
             </ScrollView>

@@ -13,7 +13,10 @@ import JustForYouSection from "@/components/JustForYouSection";
 
 const Shop: React.FC = () => {
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView
+            edges={["top", "right", "left"]}
+            style={styles.safeArea}
+        >
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <ShopHeader />
                 <Banner />
