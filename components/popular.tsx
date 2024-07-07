@@ -12,19 +12,19 @@ const mostPopular = [
     {
         image: require("@/assets/images/Placeholder_01.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
-        price: "1780❤",
+        heart: "1780",
         tag: "New",
     },
     {
         image: require("@/assets/images/Placeholder_01.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
-        price: "1780❤",
+        heart: "1780",
         tag: "Sale",
     },
     {
         image: require("@/assets/images/Placeholder_01.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
-        price: "1780❤",
+        heart: "1780",
         tag: "Hot",
     },
 ];
@@ -44,7 +44,7 @@ const MostPopular: React.FC = () => {
                         key={index}
                         image={item.image}
                         description={item.description}
-                        price={item.price}
+                        heart={item.heart}
                         tag={item.tag}
                     />
                 ))}
@@ -55,13 +55,13 @@ const MostPopular: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        marginVertical: 10,
     },
     header: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 10,
+        marginHorizontal: 15,
     },
     title: {
         fontSize: 20,

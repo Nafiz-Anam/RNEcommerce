@@ -21,12 +21,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "white",
         borderRadius: 10,
-        padding: 5,
+        padding: 8,
         margin: 5,
-        flex: 1,
-        aspectRatio: 1,
-        alignItems: "center",
-        justifyContent: "center",
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -35,25 +31,27 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: 3.84,
         elevation: 2,
+        width: 125,
+        height: 125,
     },
     image: {
         width: "100%",
         height: "100%",
-        borderRadius: 10,
+        borderRadius: 5,
     },
     discountContainer: {
         position: "absolute",
-        top: 10,
-        right: 10,
+        top: 8,
+        right: 8,
         backgroundColor: "#FF3D71",
         borderRadius: 5,
         paddingHorizontal: 5,
         paddingVertical: 2,
     },
     discountText: {
-        color: "white",
+        color: "#fff",
         fontSize: 12,
-        fontWeight: "bold",
+        fontWeight: "700",
     },
 });
 

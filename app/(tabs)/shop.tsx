@@ -6,6 +6,10 @@ import Banner from "@/components/banner";
 import Categories from "@/components/CategorySection";
 
 import TopProductsSection from "@/components/TopProductsSection";
+import NewItems from "@/components/newItem";
+import FlashSaleSection from "@/components/FlashSaleSection";
+import MostPopular from "@/components/popular";
+import JustForYouSection from "@/components/JustForYouSection";
 
 const Shop: React.FC = () => {
     return (
@@ -15,6 +19,10 @@ const Shop: React.FC = () => {
                 <Banner />
                 <Categories />
                 <TopProductsSection />
+                <NewItems />
+                <FlashSaleSection />
+                <MostPopular />
+                <JustForYouSection />
             </ScrollView>
         </SafeAreaView>
     );

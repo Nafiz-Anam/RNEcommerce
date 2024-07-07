@@ -4,43 +4,63 @@ import { View, Text, Image, StyleSheet } from "react-native";
 type ItemProps = {
     image: any;
     description: string;
-    price: string;
+    price?: string;
+    heart?: string;
     tag?: string;
 };
 
-const Item: React.FC<ItemProps> = ({ image, description, price, tag }) => {
+const Item: React.FC<ItemProps> = ({
+    image,
+    description,
+    price,
+    heart,
+    tag,
+}) => {
     return (
         <View style={styles.itemContainer}>
-            <Image source={image} style={styles.image} />
+            <View style={styles.imgContainer}>
+                <Image source={image} style={styles.image} />
+            </View> 
+
             <Text style={styles.description}>{description}</Text>
-            <Text style={styles.price}>{price}</Text>
+            {price && <Text style={styles.price}>{price}</Text>}
+            {heart && <Text style={styles.price}>{heart} ❤</Text>}
             {tag && <Text style={styles.tag}>{tag}</Text>}
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    itemContainer: {
-        backgroundColor: "white",
+    imgContainer: {
+        padding: 8,
         borderRadius: 10,
-        padding: 10,
-        margin: 5,
-        width: 150,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.2,
+        shadowRadius: 3.84,
+        backgroundColor: "#fff",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    itemContainer: {
+        margin: 8,
+        width: 160,
     },
     image: {
         width: "100%",
         height: 150,
-        borderRadius: 10,
-        marginBottom: 10,
+        borderRadius: 5,
     },
     description: {
-        fontSize: 14,
-        color: "#333",
-        marginBottom: 5,
+        fontSize: 16,
+        marginVertical: 10,
     },
     price: {
-        fontSize: 16,
-        fontWeight: "bold",
+        fontSize: 18,
+        fontWeight: "700",
     },
     tag: {
         position: "absolute",

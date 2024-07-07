@@ -14,7 +14,9 @@ const JustForYouItem: React.FC<JustForYouItemProps> = ({
 }) => {
     return (
         <View style={styles.container}>
-            <Image source={image} style={styles.image} />
+            <View style={styles.imgContainer}>
+                <Image source={image} style={styles.image} />
+            </View>
             <Text style={styles.description}>{description}</Text>
             <Text style={styles.price}>{price}</Text>
         </View>
@@ -22,15 +24,9 @@ const JustForYouItem: React.FC<JustForYouItemProps> = ({
 };
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "white",
+    imgContainer: {
+        padding: 8,
         borderRadius: 10,
-        padding: 10,
-        margin: 5,
-        flex: 1,
-        aspectRatio: 1,
-        alignItems: "center",
-        justifyContent: "center",
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -38,23 +34,25 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.2,
         shadowRadius: 3.84,
-        elevation: 2,
+        backgroundColor: "#fff",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    container: {
+        margin: 5,
     },
     image: {
         width: "100%",
-        height: "70%",
-        borderRadius: 10,
-        marginBottom: 5,
+        height: 150,
+        borderRadius: 5,
     },
     description: {
-        fontSize: 14,
-        color: "#333",
-        marginBottom: 5,
-        textAlign: "center",
+        fontSize: 16,
+        marginVertical: 10,
     },
     price: {
-        fontSize: 16,
-        fontWeight: "bold",
+        fontSize: 18,
+        fontWeight: "700",
     },
 });
 

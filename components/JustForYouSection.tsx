@@ -40,7 +40,7 @@ const JustForYouSection: React.FC = () => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>Just For You</Text>
-                <Text style={styles.star}>★</Text>
+                <Text style={styles.star}> ★</Text>
             </View>
             <FlatList
                 data={justForYouItems}
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: "row",
-        justifyContent: "space-between",
         alignItems: "center",
         marginBottom: 10,
     },

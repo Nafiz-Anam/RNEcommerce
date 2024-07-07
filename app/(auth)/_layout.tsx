@@ -53,12 +53,6 @@ const AuthLayout = () => {
                         headerShown: false,
                     }}
                 />
-                <Stack.Screen
-                    name="profile1"
-                    options={{
-                        headerShown: false,
-                    }}
-                />
             </Stack>
 
             <StatusBar style="dark" />

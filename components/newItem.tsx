@@ -10,7 +10,7 @@ import Item from "./item";
 
 const newItems = [
     {
-        image: require("@/assets/images/item.png"),
+        image: require("@/assets/images/pro02.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         price: "$17,00",
     },
@@ -51,13 +51,13 @@ const NewItems: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        marginVertical: 10,
     },
     header: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 10,
+        marginHorizontal: 15,
     },
     title: {
         fontSize: 20,

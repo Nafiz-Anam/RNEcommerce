@@ -1,11 +1,4 @@
-import React from "react";
-import {
-    View,
-    Text,
-    StyleSheet,
-    FlatList,
-    TouchableOpacity,
-} from "react-native";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 import FlashSaleItem from "./FlashSaleItem";
 
 const flashSaleItems = [
@@ -17,12 +10,16 @@ const flashSaleItems = [
     { image: require("@/assets/images/Placeholder_02.png"), discount: "-20%" },
 ];
 
-const FlashSaleSection: React.FC = () => {
+const FlashSaleSection = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>Flash Sale</Text>
                 <View style={styles.timer}>
+                    <Image
+                        source={require("@/assets/images/clock.png")}
+                        style={styles.image}
+                    />
                     <Text style={styles.timerText}>00</Text>
                     <Text style={styles.timerText}>36</Text>
                     <Text style={styles.timerText}>58</Text>
@@ -48,7 +45,13 @@ const FlashSaleSection: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        marginVertical: 10,
+        marginHorizontal: 15,
+    },
+    image: {
+        margin: 5,
+        width: 19,
+        height: 23,
     },
     header: {
         flexDirection: "row",
@@ -76,7 +79,6 @@ const styles = StyleSheet.create({
     },
     item: {
         flex: 1,
-        margin: 5,
     },
 });
 
