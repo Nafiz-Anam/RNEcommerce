@@ -2,7 +2,6 @@ import { StyleSheet, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/header";
 import Greeting from "@/components/greetings";
-import Announcement from "@/components/Announcement";
 import RecentlyViewed from "@/components/recentView";
 import MyOrders from "@/components/myOrders";
 import Stories from "@/components/stories";
@@ -12,12 +11,13 @@ import Categories from "@/components/CategorySection";
 import FlashSaleSection from "@/components/FlashSaleSection";
 import JustForYouSection from "@/components/JustForYouSection";
 import TopProductsSection from "@/components/TopProductsSection";
+import AnnouncementSlider from "@/components/AnnouncementSlider";
 
 const Profile = () => {
     const sections = [
         { id: "header", component: <Header /> },
         { id: "greeting", component: <Greeting /> },
-        { id: "announcement", component: <Announcement /> },
+        { id: "announcementSlider", component: <AnnouncementSlider /> },
         { id: "recentlyViewed", component: <RecentlyViewed /> },
         { id: "myOrders", component: <MyOrders /> },
         { id: "stories", component: <Stories /> },

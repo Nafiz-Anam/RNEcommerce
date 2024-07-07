@@ -1,19 +1,27 @@
+import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 
-const Announcement = () => {
+type AnnouncementProps = {
+    title: string;
+    text: string;
+    buttonImage: any;
+};
+
+const Announcement: React.FC<AnnouncementProps> = ({
+    title,
+    text,
+    buttonImage,
+}) => {
     return (
         <View style={styles.announcementContainer}>
             <View style={{ flex: 1 }}>
-                <Text style={styles.title}>Announcement</Text>
-                <Text style={styles.announcementText}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas hendrerit luctus libero ac vulputate.
-                </Text>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.announcementText}>{text}</Text>
             </View>
             <View>
                 <TouchableOpacity>
                     <Image
-                        source={require("@/assets/images/Button.png")}
+                        source={buttonImage}
                         style={styles.btnLogo}
                         resizeMode="contain"
                     />
