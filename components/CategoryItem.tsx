@@ -21,14 +21,11 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ image, title, count }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "white",
+        backgroundColor: "#fff",
         borderRadius: 10,
-        padding: 5,
-        margin: 5,
+        padding: 8,
         flex: 1,
-        aspectRatio: 1,
-        alignItems: "center",
-        justifyContent: "center",
+        aspectRatio: 0.8,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -37,23 +34,32 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: 3.84,
         elevation: 2,
+        paddingBottom: 50,
     },
     image: {
         width: "100%",
-        height: "70%",
+        height: "100%",
         borderRadius: 10,
         marginBottom: 5,
     },
     textContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "center",
+        width: "100%",
+        marginVertical: 5,
     },
     title: {
-        fontSize: 16,
-        fontWeight: "bold",
+        fontSize: 18,
+        fontWeight: "700",
     },
     count: {
-        fontSize: 14,
-        color: "#888",
+        fontSize: 18,
+        fontWeight: "700",
+        backgroundColor: "#DFE9FF",
+        paddingHorizontal: 15,
+        paddingVertical: 2,
+        borderRadius: 50,
     },
 });
 

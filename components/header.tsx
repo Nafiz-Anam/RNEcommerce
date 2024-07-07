@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const Header = () => {
     return (
-        <View style={styles.header}>
+        <View style={styles.headerContainer}>
             <View
                 style={{ flexDirection: "row", alignItems: "center", gap: 15 }}
             >
@@ -42,7 +42,7 @@ const Header = () => {
 };
 
 const styles = StyleSheet.create({
-    header: {
+    headerContainer: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",

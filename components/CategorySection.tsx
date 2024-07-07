@@ -1,4 +1,3 @@
-import React from "react";
 import {
     View,
     Text,
@@ -10,28 +9,28 @@ import CategoryItem from "./CategoryItem";
 
 const categories = [
     {
-        image: require("@/assets/images/Placeholder_02.png"),
+        image: require("@/assets/images/cat01.png"),
         title: "Clothing",
         count: 109,
     },
     {
-        image: require("@/assets/images/Placeholder_02.png"),
+        image: require("@/assets/images/cat01.png"),
         title: "Shoes",
         count: 530,
     },
     {
-        image: require("@/assets/images/Placeholder_02.png"),
+        image: require("@/assets/images/cat01.png"),
         title: "Bags",
         count: 87,
     },
     {
-        image: require("@/assets/images/Placeholder_02.png"),
+        image: require("@/assets/images/cat01.png"),
         title: "Lingerie",
         count: 218,
     },
 ];
 
-const Categories: React.FC = () => {
+const Categories = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -61,17 +60,18 @@ const Categories: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
     },
     header: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 10,
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: "700",
+        marginBottom: 10,
     },
     seeAll: {
         color: "#004CFF",
