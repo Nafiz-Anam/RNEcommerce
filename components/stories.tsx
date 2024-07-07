@@ -2,9 +2,9 @@ import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
 const stories = [
     require("@/assets/images/story1.png"),
-    require("@/assets/images/story1.png"),
-    require("@/assets/images/story1.png"),
-    require("@/assets/images/story1.png"),
+    require("@/assets/images/story2.png"),
+    require("@/assets/images/story3.png"),
+    require("@/assets/images/story4.png"),
 ];
 
 const Stories = () => {

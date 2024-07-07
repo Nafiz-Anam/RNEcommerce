@@ -10,19 +10,25 @@ import Item from "./item";
 
 const mostPopular = [
     {
-        image: require("@/assets/images/Placeholder_01.png"),
+        image: require("@/assets/images/popular1.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         heart: "1780",
         tag: "New",
     },
     {
-        image: require("@/assets/images/Placeholder_01.png"),
+        image: require("@/assets/images/popular2.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         heart: "1780",
         tag: "Sale",
     },
     {
-        image: require("@/assets/images/Placeholder_01.png"),
+        image: require("@/assets/images/popular3.png"),
+        description: "Lorem ipsum dolor sit amet consectetur.",
+        heart: "1780",
+        tag: "Hot",
+    },
+    {
+        image: require("@/assets/images/popular4.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         heart: "1780",
         tag: "Hot",

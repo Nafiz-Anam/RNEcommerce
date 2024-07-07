@@ -1,11 +1,11 @@
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
 const recentlyViewed = [
-    require("@/assets/images/profile.png"),
-    require("@/assets/images/profile.png"),
-    require("@/assets/images/profile.png"),
-    require("@/assets/images/profile.png"),
-    require("@/assets/images/profile.png"),
+    require("@/assets/images/view5.png"),
+    require("@/assets/images/view1.png"),
+    require("@/assets/images/view2.png"),
+    require("@/assets/images/view3.png"),
+    require("@/assets/images/view4.png"),
 ];
 
 const RecentlyViewed = () => {

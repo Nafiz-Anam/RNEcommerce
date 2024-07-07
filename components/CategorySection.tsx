@@ -14,18 +14,18 @@ const categories = [
         count: 109,
     },
     {
-        image: require("@/assets/images/cat01.png"),
-        title: "Shoes",
+        image: require("@/assets/images/cat2.png"),
+        title: "Bags",
         count: 530,
     },
     {
-        image: require("@/assets/images/cat01.png"),
-        title: "Bags",
+        image: require("@/assets/images/cat3.png"),
+        title: "Watches",
         count: 87,
     },
     {
-        image: require("@/assets/images/cat01.png"),
-        title: "Lingerie",
+        image: require("@/assets/images/cat4.png"),
+        title: "Hoodies",
         count: 218,
     },
 ];

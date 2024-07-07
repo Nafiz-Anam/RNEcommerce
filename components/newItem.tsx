@@ -15,12 +15,17 @@ const newItems = [
         price: "$17,00",
     },
     {
-        image: require("@/assets/images/item.png"),
+        image: require("@/assets/images/pro3.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         price: "$32,00",
     },
     {
         image: require("@/assets/images/item.png"),
+        description: "Lorem ipsum dolor sit amet consectetur.",
+        price: "$59,00",
+    },
+    {
+        image: require("@/assets/images/pro4.png"),
         description: "Lorem ipsum dolor sit amet consectetur.",
         price: "$21,00",
     },

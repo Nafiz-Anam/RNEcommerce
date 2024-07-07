@@ -2,12 +2,12 @@ import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 import FlashSaleItem from "./FlashSaleItem";
 
 const flashSaleItems = [
-    { image: require("@/assets/images/Placeholder_02.png"), discount: "-20%" },
-    { image: require("@/assets/images/Placeholder_02.png"), discount: "-30%" },
-    { image: require("@/assets/images/Placeholder_02.png"), discount: "-10%" },
+    { image: require("@/assets/images/flash01.png"), discount: "-20%" },
+    { image: require("@/assets/images/item.png"), discount: "-30%" },
+    { image: require("@/assets/images/flash02.png"), discount: "-10%" },
     { image: require("@/assets/images/Placeholder_02.png"), discount: "-50%" },
-    { image: require("@/assets/images/Placeholder_02.png"), discount: "-25%" },
-    { image: require("@/assets/images/Placeholder_02.png"), discount: "-20%" },
+    { image: require("@/assets/images/flash03.png"), discount: "-25%" },
+    { image: require("@/assets/images/popular1.png"), discount: "-20%" },
 ];
 
 const FlashSaleSection = () => {
