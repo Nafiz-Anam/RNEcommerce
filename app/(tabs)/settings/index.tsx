@@ -48,7 +48,9 @@ const Settings = () => {
                     />
                     <SettingsItem
                         title="Terms and Conditions"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/termsandconditions")
+                        }
                     />
                 </SettingsSection>
 
@@ -60,7 +62,12 @@ const Settings = () => {
                             router.push("/(tabs)/settings/language-selector")
                         }
                     />
-                    <SettingsItem title="About Slada" onPress={() => "#"} />
+                    <SettingsItem
+                        title="About Shoppe"
+                        onPress={() =>
+                            router.push("/(tabs)/settings/about-shoppe")
+                        }
+                    />
                 </SettingsSection>
 
                 <TouchableOpacity

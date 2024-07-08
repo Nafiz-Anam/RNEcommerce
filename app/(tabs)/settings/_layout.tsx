@@ -47,6 +47,18 @@ const SettingsLayout = () => {
                         headerShown: false,
                     }}
                 />
+                <Stack.Screen
+                    name="about-shoppe"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="termsandconditions"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack>
             <StatusBar style="dark" />
         </>
