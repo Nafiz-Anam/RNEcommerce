@@ -22,11 +22,7 @@ export default function TabLayout() {
                         title: "Home",
                         tabBarIcon: ({ color, focused }) => (
                             <TabBarIcon
-                                name={
-                                    focused
-                                        ? "code-slash"
-                                        : "code-slash-outline"
-                                }
+                                name={focused ? "home" : "home-outline"}
                                 color={color}
                             />
                         ),
@@ -38,34 +34,26 @@ export default function TabLayout() {
                         title: "Shop",
                         tabBarIcon: ({ color, focused }) => (
                             <TabBarIcon
-                                name={
-                                    focused
-                                        ? "code-slash"
-                                        : "code-slash-outline"
-                                }
+                                name={focused ? "cart" : "cart-outline"}
                                 color={color}
                             />
                         ),
                     }}
                 />
-
                 <Tabs.Screen
                     name="settings"
                     options={{
                         title: "Settings",
                         tabBarIcon: ({ color, focused }) => (
                             <TabBarIcon
-                                name={
-                                    focused
-                                        ? "code-slash"
-                                        : "code-slash-outline"
-                                }
+                                name={focused ? "settings" : "settings-outline"}
                                 color={color}
                             />
                         ),
                     }}
                 />
             </Tabs>
+
             <StatusBar style="dark" />
         </>
     );

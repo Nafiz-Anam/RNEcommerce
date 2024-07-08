@@ -2,6 +2,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity } from "react-native";
 import SettingsSection from "@/components/SettingsSection";
 import SettingsItem from "@/components/SettingsItem";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 const Settings = () => {
     return (
@@ -10,10 +11,15 @@ const Settings = () => {
                 <Text style={styles.header}>Settings</Text>
 
                 <SettingsSection title="Personal">
-                    <SettingsItem title="Profile" onPress={() => "#"} />
+                    <SettingsItem
+                        title="Profile"
+                        onPress={() => router.push("/(tabs)/settings/profile")}
+                    />
                     <SettingsItem
                         title="Shipping Address"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/shipping-address")
+                        }
                     />
                     <SettingsItem title="Payment Methods" onPress={() => "#"} />
                 </SettingsSection>
