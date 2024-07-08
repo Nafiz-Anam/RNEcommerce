@@ -28,17 +28,23 @@ const Settings = () => {
                     <SettingsItem
                         title="Country"
                         value="Vietnam"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/country-selector")
+                        }
                     />
                     <SettingsItem
                         title="Currency"
                         value="$ USD"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/currency-selector")
+                        }
                     />
                     <SettingsItem
                         title="Sizes"
                         value="UK"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/size-selector")
+                        }
                     />
                     <SettingsItem
                         title="Terms and Conditions"
@@ -50,7 +56,9 @@ const Settings = () => {
                     <SettingsItem
                         title="Language"
                         value="English"
-                        onPress={() => "#"}
+                        onPress={() =>
+                            router.push("/(tabs)/settings/language-selector")
+                        }
                     />
                     <SettingsItem title="About Slada" onPress={() => "#"} />
                 </SettingsSection>

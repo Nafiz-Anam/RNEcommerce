@@ -29,6 +29,24 @@ const SettingsLayout = () => {
                         headerShown: false,
                     }}
                 />
+                <Stack.Screen
+                    name="language-selector"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="currency-selector"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="size-selector"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack>
             <StatusBar style="dark" />
         </>
