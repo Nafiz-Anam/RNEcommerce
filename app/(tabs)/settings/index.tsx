@@ -3,8 +3,16 @@ import SettingsSection from "@/components/SettingsSection";
 import SettingsItem from "@/components/SettingsItem";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
+import { useState } from "react";
+import DeleteAccountModal from "./DeleteAccountModal";
 
 const Settings = () => {
+    const [isModalVisible, setModalVisible] = useState(false);
+
+    const handleDeleteAccount = () => {
+        // Implement delete account logic
+        setModalVisible(false);
+    };
     return (
         <SafeAreaView edges={["top", "right", "left"]} style={styles.safeArea}>
             <ScrollView style={styles.container}>
@@ -70,11 +78,7 @@ const Settings = () => {
                     />
                 </SettingsSection>
 
-                <TouchableOpacity
-                    onPress={() => {
-                        /* Implement delete account logic */
-                    }}
-                >
+                <TouchableOpacity onPress={() => setModalVisible(true)}>
                     <Text style={[styles.deleteOption]}>Delete My Account</Text>
                 </TouchableOpacity>
 
@@ -83,6 +87,12 @@ const Settings = () => {
                     Version 1.0 July, 2024
                 </Text>
             </ScrollView>
+
+            <DeleteAccountModal
+                isVisible={isModalVisible}
+                onClose={() => setModalVisible(false)}
+                onDelete={handleDeleteAccount}
+            />
         </SafeAreaView>
     );
 };
